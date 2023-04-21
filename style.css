@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --hue:191;
+
+    --color-primary:hsla(240, 9%, 89%, 1);
+    --color-remove:hsla(355, 91%, 66%, 1);
+    --bg-color-primary:hsla(194, 72%, 13%, 1);
+    --bg-color-line:hsla(192, 65%, 7%, 1);
+    --bg-color-terciary:hsla(var(--hue), 65%, 7%, 1);
+    --bg-color:hsla(196, 73%, 3%, 1);
+    --bg-color-primary-button:hsla(195, 91%, 25%, 1);
+    --border-color:hsla(191, 31%, 42%, 1);
+    
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+}
+body{
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    color: var(--color-primary);
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.app{
+    max-width: 1300px;
+    padding:2rem;
+    margin: 0 auto;
+}
+
+table{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8.7rem;
+    margin-top: 8.7rem;
+}
+header div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+header input{
+    border: 0;
+    padding:1.6rem;
+    min-width: 462px;
+   color: white;
+    background-color: var(--bg-color-terciary);
+    border-radius: .5rem;
+   
+}
+
+header button{
+    background-color: var(--bg-color-primary-button);
+    color: var(--color-primary);
+
+    padding: 1.3rem 3.2rem ;
+    border: 0;
+    border-radius: .5rem;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3;
+}
+header button:hover{
+    background: white;
+    color:var(--bg-color-primary-button);
+}
+header button svg{
+    fill: white;
+}
+header button:hover svg{
+    fill: var(--bg-color-primary-button) !important;
+}
+
+thead{
+    background-color: var(--bg-color-primary);
+    padding:4rem 1.6rem;
+    height: 6.4rem;
+    
+}
+thead td:first-child{
+   
+    padding: 1.6rem 0 1.6rem 4rem;
+   
+}
+thead td:last-child{
+   
+    border-top-right-radius:.4rem ;
+   
+}
+
+tbody{
+    overflow: hidden;
+    min-height: 400px;
+    
+}
+table{
+    border-collapse: collapse;
+}
+
+.tableFavUsers{
+    overflow: hidden;
+    border-radius: 1.2rem;
+    border:1px solid var(--border-color);
+}
+
+.user {
+    display: flex;
+    gap:10px;
+    padding: 1.6rem 0 1.6rem 4rem;
+    align-items: center;
+}
+.user img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9rem;
+
+}
+.user a{
+    text-decoration: none;
+    color: white;
+}
+
+.user a span{
+    opacity: 0.7;
+}
+
+button.remove{
+    background: transparent;
+    border: none;
+    color: var(--color-remove);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button.remove:hover{
+    opacity: 0.7;
+}
+tr:nth-child(even){
+    background: var(--bg-color-line);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child{
+    border-bottom: 0;
+}
